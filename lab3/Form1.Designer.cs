@@ -37,6 +37,8 @@
             label4 = new Label();
             textBoxOutput = new TextBox();
             buttonCalculate = new Button();
+            textBoxOutputDC = new TextBox();
+            label5 = new Label();
             SuspendLayout();
             // 
             // comboBoxOutNS
@@ -47,7 +49,7 @@
             comboBoxOutNS.Name = "comboBoxOutNS";
             comboBoxOutNS.Size = new Size(109, 23);
             comboBoxOutNS.TabIndex = 0;
-            comboBoxOutNS.SelectedIndexChanged += ComboBoxOutNS_SelectedIndexChanged;
+            comboBoxOutNS.Text = "2";
             // 
             // comboBoxInNS
             // 
@@ -57,15 +59,15 @@
             comboBoxInNS.Name = "comboBoxInNS";
             comboBoxInNS.Size = new Size(109, 23);
             comboBoxInNS.TabIndex = 1;
-            comboBoxInNS.SelectedIndexChanged += ComboBoxInNS_SelectedIndexChanged;
+            comboBoxInNS.Text = "10";
             // 
             // textBoxInput
             // 
             textBoxInput.Location = new Point(97, 70);
+            textBoxInput.MaxLength = 11;
             textBoxInput.Name = "textBoxInput";
-            textBoxInput.Size = new Size(183, 23);
+            textBoxInput.Size = new Size(261, 23);
             textBoxInput.TabIndex = 2;
-            textBoxInput.TextChanged += TextBoxInput_TextChanged;
             // 
             // label1
             // 
@@ -107,13 +109,12 @@
             // 
             textBoxOutput.Location = new Point(97, 99);
             textBoxOutput.Name = "textBoxOutput";
-            textBoxOutput.Size = new Size(183, 23);
+            textBoxOutput.Size = new Size(261, 23);
             textBoxOutput.TabIndex = 7;
-            textBoxOutput.TextChanged += TextBoxOutput_TextChanged;
             // 
             // buttonCalculate
             // 
-            buttonCalculate.Location = new Point(97, 128);
+            buttonCalculate.Location = new Point(97, 157);
             buttonCalculate.Name = "buttonCalculate";
             buttonCalculate.Size = new Size(75, 23);
             buttonCalculate.TabIndex = 8;
@@ -121,13 +122,31 @@
             buttonCalculate.UseVisualStyleBackColor = true;
             buttonCalculate.Click += ButtonCalculate_Click;
             // 
+            // textBoxOutputDC
+            // 
+            textBoxOutputDC.Location = new Point(97, 128);
+            textBoxOutputDC.Name = "textBoxOutputDC";
+            textBoxOutputDC.Size = new Size(261, 23);
+            textBoxOutputDC.TabIndex = 9;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(12, 131);
+            label5.Name = "label5";
+            label5.Size = new Size(23, 15);
+            label5.TabIndex = 10;
+            label5.Text = "ПК";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(369, 195);
+            ClientSize = new Size(385, 201);
+            Controls.Add(label5);
+            Controls.Add(textBoxOutputDC);
             Controls.Add(buttonCalculate);
             Controls.Add(textBoxOutput);
             Controls.Add(label4);
@@ -154,5 +173,7 @@
         private Label label4;
         private TextBox textBoxOutput;
         private Button buttonCalculate;
+        private TextBox textBoxOutputDC;
+        private Label label5;
     }
 }
